@@ -1,4 +1,4 @@
-package org.jenkinsci.plugins.gitflowutils.promoted;
+package org.jenkinsci.plugins.gitflowutils.promotion;
 
 import hudson.EnvVars;
 import hudson.Extension;
