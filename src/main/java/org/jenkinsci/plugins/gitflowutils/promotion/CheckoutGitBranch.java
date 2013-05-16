@@ -65,7 +65,7 @@ public class CheckoutGitBranch extends Builder {
             public Void invoke(File workspace, VirtualChannel channel) throws IOException, InterruptedException {
 
                 GitClient git = Git.with(listener, environment).in(workspace).using(gitExe).getClient();
-                git.checkoutBranch(gitBranch, "HEAD");
+                git.checkoutBranch("release/0.1", "HEAD");
 
                 return null;
             }
