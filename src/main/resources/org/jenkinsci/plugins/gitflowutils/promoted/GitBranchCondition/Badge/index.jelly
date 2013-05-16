@@ -1,0 +1,5 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt">
+    <l:pane title="Matched Branch Pattern" width="100">
+        <tr><td colspan="4">Branch <b>${it.branch}</b> matched pattern <i>${it.matched}</i></td></tr>
+    </l:pane>
+</j:jelly>
