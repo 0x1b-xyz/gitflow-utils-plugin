@@ -49,6 +49,11 @@
     <dependencies>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>token-macro</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
             <version>1.4.0</version>
         </dependency>
@@ -71,10 +76,22 @@
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.jenkins-ci.tools</groupId>
+                <artifactId>maven-hpi-plugin</artifactId>
+                <version>1.74</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <showDeprecation>true</showDeprecation>
+                    <hudsonHome>${java.io.tmpdir}/${project.artifactId}/work</hudsonHome>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>com.atlassian.maven.plugins</groupId>
                 <artifactId>maven-jgitflow-plugin</artifactId>
-                <version>1.0-alpha7</version>
+                <version>1.0-alpha8</version>
             </plugin>
         </plugins>
     </build>
